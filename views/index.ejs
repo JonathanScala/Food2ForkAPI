@@ -1,0 +1,39 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <link href="/indexStyles.css" rel="stylesheet" type="text/css">
+    <title>Assignment 3</title>
+</head>
+
+<body>
+    <h1>Assignment 3: Food2Fork API</h1>
+    <form name="userQuery" method="POST" action="/recipes">
+        <table>
+            <tr>
+                <td>Search Ingredients/Foods: </td>
+                <td><input type="text" name="ingredient"></td>
+            </tr>
+            <tr>
+                <td colspan="2"><input type="submit" value="Search"></td>
+            </tr>
+        </table>
+    </form>
+
+    <% if (typeof results !== 'undefined') { %>
+        <div class="foodres">
+            <% results.forEach(function(e) { %>
+                <div class="foodImages">
+                    <a href='<%= e.link %>' target="_blank">
+                    <img src='<%= e.img %>' alt='<%= e.title %>'>
+                    <span class="Desc"> '<%= e.title %>'
+                </div>
+            <% }) %>
+        </div>
+    <% } %>
+
+</body>
+</html>

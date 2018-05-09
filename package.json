@@ -1,0 +1,19 @@
+{
+  "name": "Food2ForkAPI",
+  "version": "1.0.0",
+  "private": true,
+  "description": "",
+  "main": "Server.js",
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1",
+    "start": "node Server.js"
+  },
+  "author": "Jonathan Scala",
+  "license": "ISC",
+  "dependencies": {
+    "body-parser": "^1.18.2",
+    "ejs": "^2.5.7",
+    "express": "^4.16.2",
+    "request": "^2.83.0"
+  }
+}
